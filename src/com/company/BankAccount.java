@@ -16,24 +16,26 @@ public class BankAccount {
 
 
         amount = +sum;
-
+        return;
     }
 
 
-    public void withDraw(float sum) throws Exception {
+    public float withDraw(float sum) throws Exception {
         amount -= sum;
         if (sum > amount) {
 
             throw new LimitException("Недостаточная сумма на счету", amount);
+        }else {
+            amount -= sum;
         }
-
-
-    }
-
-    public float lastMoney() {
-        float sum = 4000;
-        amount -= sum;
         return amount;
     }
 
+
+    public void takeMoney() {
+
+        double amount1 = getAmount();
+        amount = (float) (amount1-getAmount());
+
+    }
 }

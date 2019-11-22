@@ -4,7 +4,7 @@ public class Main {
 
     public static void main(String[] args) {
         BankAccount bankAccount = new BankAccount(10000);
-        bankAccount.lastMoney();
+        bankAccount.getAmount();
         while (true){
             try {
                 bankAccount.withDraw(6000);
