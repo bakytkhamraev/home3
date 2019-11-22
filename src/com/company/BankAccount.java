@@ -24,7 +24,7 @@ public class BankAccount {
         amount -= sum;
         if (sum > amount) {
 
-            throw new LimitException("Недостаточная сумма на счету", amount);
+            throw new LimitException("Недостаточная сумма на счету, у вас сейчас на счету", amount);
         }else {
             amount -= sum;
         }
